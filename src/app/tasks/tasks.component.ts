@@ -18,9 +18,14 @@ const TASKS: Array<Task> = [
 
 export class TasksComponent implements OnInit {
     public tasks;
+    public selectedTask: Task;
     constructor() {}
 
     ngOnInit() {
         this.tasks = TASKS;
+    }
+
+    onSelect(task: Task): void {
+        this.selectedTask = task;
     }
 }
